@@ -86,11 +86,13 @@ class Validators {
     return (value) {
       if (value.trim().isEmpty)
         return null;
-      else {
+      else if (value == "Not Set") {
+        return null;
+      } else {
         final dValue = _toDouble(value);
-        if (dValue > max)
+        if (dValue > max) {
           return errorMessage;
-        else
+        } else
           return null;
       }
     };
