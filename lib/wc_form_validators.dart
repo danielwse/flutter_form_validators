@@ -86,7 +86,7 @@ class Validators {
     return (value) {
       if (value.trim().isEmpty)
         return null;
-      else if (value == "Not Set") {
+      else if (value == "Not Set" || value == "Set A Max Spend") {
         return null;
       } else {
         final dValue = _toDouble(value);
